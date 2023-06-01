@@ -14,7 +14,7 @@ public class MenuScript : MonoBehaviour
 
     public void StartLevel()
     {
-        var dd = int.Parse(hardness.text);
+        PlayerPrefs.SetInt("Difficulty", int.Parse(hardness.text));
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
