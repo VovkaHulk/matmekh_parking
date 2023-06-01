@@ -7,6 +7,8 @@ public class MainPanelHandler : MonoBehaviour
 {
     public GameObject mainPanel;
     public GameObject pauseMenu1;
+    public GameObject resultOKPanel;
+    public GameObject resultBADPanel;
     public GameObject car;
     public GameObject parkingPlace1;
     public GameObject parkingPlace2;
@@ -63,6 +65,7 @@ public class MainPanelHandler : MonoBehaviour
 
     public void CheckParking()
     {
+        Time.timeScale = 0f;
         var parkingPlaces = new List<GameObject>() { parkingPlace1, parkingPlace2, parkingPlace3, parkingPlace4, parkingPlace5, parkingPlace6,  parkingPlace7, parkingPlace8, parkingPlace9, parkingPlace10, parkingPlace11, parkingPlace12,  parkingPlace13, parkingPlace14, parkingPlace15, parkingPlace16, parkingPlace17, parkingPlace18,  parkingPlace19, parkingPlace20, parkingPlace21, parkingPlace22, parkingPlace23, parkingPlace24,  parkingPlace25, parkingPlace26, parkingPlace27, parkingPlace28, parkingPlace29, parkingPlace30,  parkingPlace31, parkingPlace32, parkingPlace33, parkingPlace34};
         var minLen = 1e9;
         foreach(var parkingPlace in parkingPlaces)
@@ -76,7 +79,10 @@ public class MainPanelHandler : MonoBehaviour
 
             }
         }
-        Debug.Log(minLen.ToString());
+        if (minLen <= 4)
+            resultOKPanel.SetActive(true);
+        else
+            resultBADPanel.SetActive(true);
     }
 
 
