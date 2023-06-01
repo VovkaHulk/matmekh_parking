@@ -7,6 +7,7 @@ public class PauseMenu : MonoBehaviour
 {
     bool GameIsPaused = false;
     public GameObject pauseMenu;
+    public GameObject mainPanel1;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +36,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
+        mainPanel1.SetActive(true);
     }
 
     public void RestartGame()
