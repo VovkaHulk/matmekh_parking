@@ -130,9 +130,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 33042539280947458, guid: 73079eb7b6198f54c80d7327638e8e68, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 210d0ef5a5a7a3943be252a3a7915b81, type: 3}
+    - target: {fileID: 33042539280947458, guid: 73079eb7b6198f54c80d7327638e8e68, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2003455950494210470, guid: 73079eb7b6198f54c80d7327638e8e68, type: 3}
       propertyPath: m_Name
-      value: images
+      value: ParkedCar
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003455950494210470, guid: 73079eb7b6198f54c80d7327638e8e68, type: 3}
+      propertyPath: m_TagString
+      value: Parked car
       objectReference: {fileID: 0}
     - target: {fileID: 9055064594928252776, guid: 73079eb7b6198f54c80d7327638e8e68, type: 3}
       propertyPath: m_RootOrder
@@ -178,7 +190,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2772642894094807323, guid: 73079eb7b6198f54c80d7327638e8e68, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 73079eb7b6198f54c80d7327638e8e68, type: 3}
 --- !u!1 &147949082
 GameObject:
@@ -754,6 +767,7 @@ GameObject:
   - component: {fileID: 333958793}
   - component: {fileID: 333958792}
   - component: {fileID: 333958791}
+  - component: {fileID: 333958795}
   m_Layer: 0
   m_Name: Car
   m_TagString: Player
@@ -828,6 +842,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 100}
+--- !u!114 &333958795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333958790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e4ec80811e61e948bb6f88900c76690, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &337116722
 GameObject:
   m_ObjectHideFlags: 0
@@ -846,7 +872,7 @@ GameObject:
   - component: {fileID: 337116730}
   m_Layer: 0
   m_Name: Cars
-  m_TagString: Untagged
+  m_TagString: Parked car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1370,8 +1396,14 @@ EdgeCollider2D:
   - {x: -23.349327, y: -3.5212927}
   - {x: -23.154472, y: 0.22524548}
   - {x: -24.430614, y: 4.4625683}
+  - {x: -5.2211685, y: 8.514361}
+  - {x: -4.148842, y: 1.9904699}
+  - {x: -0.7610626, y: 0.37567902}
+  - {x: 1.1999512, y: 3.8415728}
+  - {x: 0.010299683, y: 10.19893}
   - {x: 9.764618, y: 11.970569}
   - {x: 11.494682, y: 7.075103}
+  - {x: -3.282524, y: -1.7329912}
   - {x: -19.274427, y: 1.2681465}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
@@ -2041,6 +2073,43 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2003455950494210470, guid: 73079eb7b6198f54c80d7327638e8e68, type: 3}
   m_PrefabInstance: {fileID: 107069794}
   m_PrefabAsset: {fileID: 0}
+--- !u!68 &683331626
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683331625}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 1.2243123, y: 0.61024994}
+  - {x: 1.492725, y: 0.45354775}
+  - {x: 1.5756642, y: -0.23497823}
+  - {x: 1.4278367, y: -0.52723646}
+  - {x: 0.89654464, y: -0.6928097}
+  - {x: 0.35512185, y: -0.61982775}
+  - {x: 0.22457421, y: -0.7808353}
+  - {x: 0.17810497, y: -0.6550989}
+  - {x: -0.83654433, y: -0.6980021}
+  - {x: -1.5396439, y: -0.5396967}
+  - {x: -1.5913013, y: 0.013970271}
+  - {x: -1.5068715, y: 0.5704409}
+  - {x: -0.9840542, y: 0.6787533}
+  - {x: 0.19183992, y: 0.6553239}
+  - {x: 0.2444418, y: 0.7471952}
+  - {x: 0.35187763, y: 0.6473532}
+  - {x: 1.2023132, y: 0.66768}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &783623726
 GameObject:
   m_ObjectHideFlags: 0
@@ -3963,6 +4032,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1048086122}
   - component: {fileID: 1048086123}
+  - component: {fileID: 1048086124}
   m_Layer: 0
   m_Name: Colider
   m_TagString: Untagged
@@ -4028,6 +4098,18 @@ PolygonCollider2D:
       - {x: 0.04124117, y: -3.5669622}
       - {x: 1.3682718, y: -3.5370774}
       - {x: 1.4197009, y: -0.5228929}
+--- !u!114 &1048086124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048086121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e4ec80811e61e948bb6f88900c76690, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1060505677
 GameObject:
   m_ObjectHideFlags: 0

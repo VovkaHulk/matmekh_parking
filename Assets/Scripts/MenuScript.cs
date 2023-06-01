@@ -20,7 +20,7 @@ public class MenuScript : MonoBehaviour
 
     public void PlusHard()
     {
-        hardness.text = math.min(int.Parse(hardness.text) + 1, 9).ToString();
+        hardness.text = math.min(int.Parse(hardness.text) + 1, 10).ToString();
     }
 
     public void MinusHard()

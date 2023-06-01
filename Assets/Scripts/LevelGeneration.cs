@@ -11,8 +11,10 @@ public class LevelGeneration : MonoBehaviour
     {
         if (Random.Range(0, 10) <= PlayerPrefs.GetInt("Difficulty"))
         {
-            Instantiate(car, transform.position, Quaternion.Euler(0, 0, -45));
-            Destroy(gameObject);
+            var positionOfParkingPlace = gameObject.transform.position;
+            positionOfParkingPlace.y += 0;
+            Instantiate(car, positionOfParkingPlace, gameObject.transform.rotation);
+            gameObject.SetActive(false);
         }
     }
 
